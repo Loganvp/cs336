@@ -71,9 +71,16 @@ module.exports = React.createClass({
   render: function() {
       return (
         <div className={style.votingBox}>
+        <div className={style.instructions}>
+        Who is META? Who is NOT? Use the poll below to vote the likiness of one
+        Squadron beating the other.
+        </div>
+
         <SquadronListA data = {this.state.data}/>
 
         <SquadronForm onMatchupSubmit = {this.handleMatchupSubmit}/>
+        <div className={style.instructions}>Vote the chance of each Squadron winning.
+        </div>
         </div>
         )
     }

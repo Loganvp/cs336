@@ -14,7 +14,7 @@ module.exports = React.createClass({
 
         var PilotNames = squadron.pilots.map(function(pilot) {
           return (
-            <names>{pilot.name}</names>
+            <names><br />{pilot.name}</names>
           )
         });
 
