@@ -11,9 +11,9 @@ module.exports = React.createClass({
         return (
           <div className="{style.Squadron}">
           <h2 className="SquadNumber">Squad: {this.props.squadron}</h2>
-          <div className="SquadInfo"> {this.props.faction}, {this.props.points},
-          {this.props.names}
-          </div>
+          <div className="SquadFaction"><b>Faction:</b> {this.props.faction}</div>
+          <div className="SquadPoints"><b>Points:</b> {this.props.points}</div>
+          <div className="SquadPilots"><b>Pilots:</b> {this.props.names}</div>
 
           </div>
         );

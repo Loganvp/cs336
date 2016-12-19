@@ -53,16 +53,42 @@ footer {
   flex: 1 1 50%;
   order: 1;
 }
-
-.squadListB{
+.squadListA:data{
   padding: 5px;
   border: 1px solid #000;
   flex: 1 1 50%;
-  order: 3;
+  order: 1;
 }
 
 .squadronForm {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.squadronForm input[type=number] {
+  max-width: 40px;
+  height: 40px;
+  margin: 30px;
+  font-size: 20px;
+  align-content: center;
+  flex: 100%;
+  order: 1;
+}
 
+.squadronForm input[type=submit] {
+  background-color: #4CAF50;
+  border: 2px solid;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
+  height: 40px;
+  margin: 30px;
+  font-size: 20px;
+  order: 2;
 }
 
 .navBar {

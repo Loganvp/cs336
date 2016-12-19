@@ -3,7 +3,6 @@
 import React from 'react';
 import $ from 'jquery';
 import SquadronListA from './squadronListA';
-import SquadronListB from './squadronListB';
 import SquadronForm from './squadronForm';
 import style from '../css/style.css';
 import { API_URL, POST_URL, POLL_INTERVAL } from './global';
@@ -26,6 +25,19 @@ module.exports = React.createClass({
       }.bind(this)
     });
   },
+  // handleButtonSubmit: function() {
+  //   $.ajax({
+  //     url: API_URL,
+  //     dataType: 'json',
+  //     cache: false,
+  //     success: function(data) {
+  //       this.setState({data: data});
+  //     }.bind(this),
+  //     error: function(xhr, status, err) {
+  //       console.error(API_URL, status, err.toString());
+  //     }.bind(this)
+  //   });
+  // },
   handleMatchupSubmit: function(result) {
     var squadronNumber = this.state.data.map(function(squadron){
       return (

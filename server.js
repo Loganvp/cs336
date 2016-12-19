@@ -24,8 +24,8 @@ var USERNAME = 'cs336';
 //change the password for the db
 var PASSWORD = 'PASSWORD';
 
-GLOBAL.number1 =1;
-GLOBAL.number2 =2;
+global.number1 =1;
+global.number2 =2;
 
 //connects to database
 var APP_PATH = path.join(__dirname, 'dist');
@@ -48,12 +48,12 @@ app.use(function(req, res, next) {
 });
 
 app.get('/api/squadrons', function(req, res) {
-  GLOBAL.number1 = Math.floor(Math.random() * 10) + 1;
-  GLOBAL.number2 = Math.floor(Math.random() * 10) + 1;
-  while(GLOBAL.number1  == GLOBAL.number2){
-    GLOBAL.number2 = Math.floor(Math.random() * 10) + 1;
+  global.number1 = Math.floor(Math.random() * 10) + 1;
+  global.number2 = Math.floor(Math.random() * 10) + 1;
+  while(global.number1  == global.number2){
+    global.number2 = Math.floor(Math.random() * 10) + 1;
   }
-  dbConnection.collection("squadrons").find({$or: [ {"squadron": Number(GLOBAL.number1)}, {"squadron": Number(GLOBAL.number2)}]}).toArray(function(err, docs) {
+  dbConnection.collection("squadrons").find({$or: [ {"squadron": Number(global.number1)}, {"squadron": Number(global.number2)}]}).toArray(function(err, docs) {
     if (err) throw err;
     res.json(docs);
   });
@@ -69,13 +69,13 @@ app.get('/api/matchups', function(req, res){
 app.post('/api/matchups', function(req, res){
   console.log("post");
   var matchup1={
-    squadron1: GLOBAL.number1, //placeholder
-    squadron2: GLOBAL.number2, //placeholder
+    squadron1: global.number1, //placeholder
+    squadron2: global.number2, //placeholder
     percentage: req.body.valueone,
   };
   var matchup2 = {
-    squadron1: GLOBAL.number2, //placeholder
-    squadron2: GLOBAL.number1, //placeholder
+    squadron1: global.number2, //placeholder
+    squadron2: global.number1, //placeholder
     percentage: req.body.valuetwo,
   };
   dbConnection.collection("matchups").insertOne(matchup1);

@@ -34,6 +34,10 @@ module.exports = React.createClass({
     this.props.onMatchupSubmit({valueone: one, valuetwo: two})
     this.setState({valueone: 50, valuetwo: 50});
   },
+  // handleButton: function() {
+  //   this.props.onMatchupSubmit()
+  //   this.setState({valueone: 50, valuetwo: 50});
+  // },
   render: function() {
     return (
       <form className={style.squadronForm} onSubmit={this.handleSubmit}>
@@ -49,7 +53,7 @@ module.exports = React.createClass({
           value={this.state.valuetwo}
           onChange={this.handleValueTwoChange}
           />
-          <input className="ui-button ui-widget ui-corner-all" type="submit" value="Post" />
+          <input className="ui-button ui-widget ui-corner-all" type="submit" value="SUBMIT" />
       </form>
     );
   }
