@@ -48,6 +48,7 @@ module.exports = React.createClass({
           onChange={this.handleValueOneChange}
           />
           <input className="ui-widget ui-corner-all"
+          id="vs"
           type="number"
           placeholder='50'
           value={this.state.valuetwo}

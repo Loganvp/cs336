@@ -23,6 +23,12 @@ footer {
   border: 1px solid #000;
   background: #3882C7;
 }
+.instructions {
+  font-style: bold;
+  font-size: 20px;
+  color: #3882C7;
+  text-align: center;
+}
 .mainWindow {
   background-color: #fafafa;
   width: 100%;
@@ -39,6 +45,9 @@ footer {
   flex: 100%;
   order: 1;
 }
+
+.result {
+}
 .resultsBox{
   padding: 15px;
   background: #c8c8c8;
@@ -50,16 +59,14 @@ footer {
 .squadListA{
   padding: 5px;
   border: 1px solid #000;
-  flex: 1 1 50%;
-  order: 1;
-}
-.squadListA:data{
-  padding: 5px;
-  border: 1px solid #000;
-  flex: 1 1 50%;
+  flex: 1 1 90%;
   order: 1;
 }
 
+.squadron {
+  /*border: 2px solid;
+  border-color: black;*/
+}
 .squadronForm {
   display: flex;
   flex-flow: row wrap;
